@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        div {
+            width: 192px;
+            height: 129px;
+            margin: 150px auto;
+        }
+        li {
+            float: left;
+            width: 40px;
+            height: 35px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            background-image: url(pic.jpg);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+    <script>
+        var lis = document.querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++){
+            var j = 44 * i;
+            lis[i].style.backgroundPosition = '0 -' + j + 'px';
+        }
+    </script>
+</body>
+</html>

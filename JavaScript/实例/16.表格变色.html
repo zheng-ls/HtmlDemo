@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        table {
+            margin: 250px auto;
+            
+            text-align: center;
+        }
+        table,tr,td {
+            border-bottom: 1px solid #ccc;
+        }
+
+        thead tr {
+            background-color: skyblue;
+        }
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0" width="900px" height="160px">
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新净值</th>
+                <th>累计净值</th>
+                <th>公布日期</th>
+                <th>基金规模</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>003526</td>
+                <td>广发理财30天债券B</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>2010-08-24</td>
+                <td>708.224</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开发债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>2010-08-24</td>
+                <td>708.224</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>中银证券安进债券A</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>2010-08-24</td>
+                <td>708.224</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>兴全合值混合A</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>2010-08-24</td>
+                <td>708.224</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        var table = document.querySelector('table');
+        for (var i = 0; i < trs.length; i++) {
+            trs[i].onmouseover = function () {
+                this.className = 'bg';
+            }
+            trs[i].onmouseout = function () {
+                this.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

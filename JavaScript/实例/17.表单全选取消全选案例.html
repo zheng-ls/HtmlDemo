@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 300px;
+            height: 200px;
+            margin: 250px auto;
+            text-align: center;
+        }
+        thead tr {
+            height: 40px;
+            background-color: pink;
+            color: #fff;
+        } 
+        tbody tr {
+            font-size: 13px;
+        }
+        tbody,tr,td {
+            border: 1px solid #ccc;
+        }
+        thead,tr,th {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <form action="xxx.php">
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox">
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iphone11</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iPad Pro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>iPad Air</td>
+                    <td>3000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>Apple Watch</td>
+                    <td>2500</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        var th = document.querySelector('thead').querySelector('input');
+        var trs = document.querySelector('tbody').querySelectorAll('input');
+        th.onclick = function(){
+            for(var i = 0; i < trs.length; i++){
+                trs[i].checked = this.checked;
+            }
+        }
+        for (var i = 0; i < trs.length; i++){
+            trs[i].onclick = function(){
+                var flag = true;
+                for(var j = 0; j < trs.length; j++){
+                    if(!trs[j].checked){
+                        th.checked = false;
+                        flag = false;
+                    }
+                }
+                th.checked = flag;
+            }
+        }
+    </script>
+</body>
+</html>

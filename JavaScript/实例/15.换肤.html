@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .box {
+            width: 450px;
+            height: 74px;
+            margin: 200px auto;
+            background-color: #fff;
+            
+        }
+        .box li{
+            float: left;
+            width: 110px;
+            height: 76px;
+            margin-left: 2px;
+            margin-top: 2px;
+        }
+        .box li img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <li><img src="skin1.jpg"></li>
+        <li><img src="skin2.jpg"></li>
+        <li><img src="skin3.jpg"></li>
+        <li><img src="skin4.jpg"></li>
+    </div>
+    <script>
+        var imgs = document.querySelector('.box').querySelectorAll('img');
+        var body = document.querySelector('body');
+        for(i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function() {
+                document.body.style.backgroundImage = 'url('+ this.src + ')';
+                
+            }
+        }
+    </script>
+</body>
+</html>

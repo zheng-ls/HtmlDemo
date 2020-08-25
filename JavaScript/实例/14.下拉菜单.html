@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 82px;
+            height: 103px;
+            margin: 100px auto;
+        }
+
+        .box .click {
+            width: 70px;
+            height: 28px;
+            padding-left: 10px;
+        }
+
+        .click a {
+            text-decoration: none;
+            font-size: 14px;
+            color: rgb(53, 51, 51);
+        }
+
+        .info {
+            display: none;
+        }
+
+        .info li {
+            width: 70px;
+            height: 25px;
+            border: 1px solid rgb(255, 129, 64);
+            padding-left: 10px;
+            border-top: 0;
+        }
+
+        .info li a {
+            text-decoration: none;
+            font-size: 14px;
+            color: rgb(73, 71, 71);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <li class="click"><a href="#" class="four">微博</a></li>
+        <div class="info">
+            <li><a href="#" class="one">私信</a></li>
+            <li><a href="#" class="two">评论</a></li>
+            <li><a href="#" class="three">@我</a></li>
+        </div>
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        var click = document.querySelector('.click');
+        var info = document.querySelector('.info');
+        var lis = document.querySelectorAll('li');
+        var one = document.querySelector('.one');
+        var two = document.querySelector('.two');
+        var three = document.querySelector('.three');
+        var four = document.querySelector('.four');
+        box.onmouseover = function () {
+            click.style.backgroundColor = '#eee6e6';
+            four.style.color = 'rgb(255, 129, 64)';
+            info.style.display = 'block';
+        }
+        box.onmouseout = function () {
+            click.style.backgroundColor = '#fff';
+            info.style.display = 'none';
+            four.style.color = 'rgb(53, 51, 51)';
+        }
+        lis[1].onmouseover = function () {
+            this.style.backgroundColor = 'rgb(255, 231, 151)';
+            one.style.color = 'rgb(255, 129, 64)';
+        }
+        lis[1].onmouseout = function () {
+            this.style.backgroundColor = '#fff';
+            one.style.color = 'rgb(53, 51, 51)';
+        }
+        lis[2].onmouseover = function () {
+            this.style.backgroundColor = 'rgb(255, 231, 151)';
+            two.style.color = 'rgb(255, 129, 64)';
+        }
+        lis[2].onmouseout = function () {
+            this.style.backgroundColor = '#fff';
+            two.style.color = 'rgb(53, 51, 51)';
+        }
+        lis[3].onmouseover = function () {
+            this.style.backgroundColor = 'rgb(255, 231, 151)';
+            three.style.color = 'rgb(255, 129, 64)';
+        }
+        lis[3].onmouseout = function () {
+            this.style.backgroundColor = '#fff';
+            three.style.color = 'rgb(53, 51, 51)';
+        }
+
+
+    </script>
+</body>
+
+</html>

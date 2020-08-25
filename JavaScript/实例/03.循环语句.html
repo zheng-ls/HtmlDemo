@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* var num = prompt('请输入次数');
+        for (var i = 1; i <= num; i++) {
+            console.log('你好吗');
+        } */
+        // 求1-100之间所有整数的累加和
+        /* for (var i = 1,sum = 0; i <= 100; i++){
+            sum += i;
+        }
+        console.log(sum); */
+        /* var num = prompt('请输入班级总人数');
+        var sum = 0;
+        var average;
+        for (var i = 1; i <= num; i++){
+            var score = prompt('请输入第' + i + '个同学成绩');
+            sum += parseFloat(score);
+        }
+        average = sum / num;
+        alert('该班级的总成绩为' + sum);
+        alert('该班级的平均成绩为' + average); */
+        /* var row = prompt('请输入行数');
+        var col = prompt('请输入列数'); */
+        /* var str= '';
+        for (var i = 1; i <= 10; i++){
+            for (var j = 1; j <= i; j++){
+                str += '★';
+            }
+            str += '\n';
+        }
+        console.log(str); */
+        /* var str = '';
+        for (var i = 1; i <=9; i++){
+            for (var j = 1; j <= i; j++){
+                var sum = i * j;
+                str += j + '×' + i + '=' + sum + '\t';
+            }
+            str += '\n';
+        }
+        console.log(str); */
+        /* var i = 1;
+        while( i <= 100){
+            console.log('这个人今年' + i + '岁了');
+            i++;
+        } */
+        // 求1~100之间，除了能被7整除之外的整数和
+        /* var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum); */
+        var num = prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出');
+        var money = 100;
+        do {
+            if (num == 1) {
+                var increase = prompt('请您输入存的钱数');
+                money += parseFloat(increase);
+                alert('您现在的钱数为：' + money);
+            } else if (num == 2) {
+                var decrease = prompt('请您输入取的钱数');
+                money -= parseFloat(decrease);
+                alert('您现在的钱数为：' + money);
+            } else if (num == 3) {
+                alert('您现在的余额为：' + money);
+            }else {
+                break;
+            }
+            num = prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出');
+        } while (num !== 4)
+        alert('您已退出');
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

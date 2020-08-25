@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 900px;
+            height: 40px;
+            margin: 200px auto;
+        }
+        .box h4 {
+            float: left;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .box input {
+            float: left;
+            width: 400px;
+            height: 28px;
+            margin-top: 5px;
+            padding-left: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+        }
+        .box p {
+            float: left;
+            margin-left: 7px;
+            width: 400px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h4>设置密码：</h4>
+        <input type="password">
+        <p>6-16位字符（字母、数字、符号），区分大小写</p>
+    </div>
+    <script>
+        var pwd = document.querySelector('input');
+        var erro = document.querySelector('p');
+        pwd.onblur = function () {
+            if (pwd.value.length < 6 || pwd.value.length >16){
+                erro.innerHTML = '密码长度不对，要求6-16位';
+                erro.style.color = 'red';
+            } else {
+                erro.innerHTML = '密码符合规定';
+                erro.style.color = 'green';
+            }
+        }
+    </script>
+</body>
+</html>

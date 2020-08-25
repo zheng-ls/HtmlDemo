@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 400px;
+            margin: 100px auto;
+        }
+        .box input {
+            float: left;
+            width: 340px;
+            height: 30px;
+            padding-left: 3px;
+            border: 2px solid rgb(78, 110, 242);
+            font-size: 14px;
+            line-height: 30px;
+            color: #999;
+            outline: none;
+        }
+        .box button {
+            float: left;
+            width: 53px;
+            height: 34px;
+            border: 0;
+            background-color: rgb(78, 110, 242);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" value="请输入">
+        <button>搜索</button>
+    </div>
+    <script>
+        var text = document.querySelector('input');
+        text.onfocus = function(){
+            if(this.value == '请输入')
+            this.value = '';
+            this.style.color = '#333';
+        }
+        text.onblur = function(){
+            if(this.value == '')
+            this.value = '请输入';
+            this.style.color = '#999';
+        }
+    </script>
+</body>
+</html>
