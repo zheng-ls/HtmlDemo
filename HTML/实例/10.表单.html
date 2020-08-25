@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form action="xxx.php" method="get">
+        <table width="500" height="250">
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" value="请输入用户名"  /></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" /></td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" value="请输入姓名"  /></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td><input type="radio" name="sex" checked="checked" id="nan" /><label for="nan">男</label> <input type="radio" name="sex" id="nv" /><label for="nv">女</label></td>
+            </tr>
+            <tr>
+                <td>出生日期：</td>
+                <td>
+                    <select>
+                       <option>--请选择年--</option>
+                       <option>1990</option>
+                       <option>1991</option>
+                       <option>1992</option>
+                       <option>1993</option>
+                       <option>1994</option>
+                       <option>1995</option>
+                       <option>1996</option>
+                    </select>
+                    <select>
+                        <option>--请选择月--</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                    </select>
+                    <select>
+                        <option>--请选择日--</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>   
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <td><input type="checkbox" name="hobby" />唱歌 <input type="checkbox" name="hobby" />跳舞 <input type="checkbox" name="hobby" />打游戏 <input type="checkbox" name="hobby" />看书</td>
+            </tr>
+            <tr>
+                <td>自我介绍：</td>
+                <td>
+                    <textarea cols="35" rows="5">请输入文字</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input type="submit" value="免费注册" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="#">我是会员，直接登录</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h4>我承诺</h4>
+                    <ul>
+                        <li>年满18岁，单身</li>
+                        <li>抱着严肃的态度</li>
+                        <li>真诚寻找另一半</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>

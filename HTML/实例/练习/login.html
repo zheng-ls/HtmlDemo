@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 675px;
+            height: 1014px;
+            background-color: rgba(75, 165, 215, 0.65);
+            text-align: center;
+        }
+
+        .cover h1 {
+            margin-top: 370px;
+            color: #fff;
+            font-size: 38px;
+            font-weight: 400;
+        }
+
+        .cover p {
+            margin-top: 35px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 80;
+        }
+
+        .left {
+            float: left;
+            width: 675px;
+            height: 1054px;
+        }
+
+        .left img {
+            width: 100%;
+        }
+
+        .right {
+            float: left;
+            width: 1228px;
+            height: 1013px;
+            background-color: #fff;
+
+        }
+
+        .right h2 {
+            margin-left: 120px;
+            margin-top: 290px;
+            font-size: 36px;
+            font-weight: 550;
+            color: #4e4e4e;
+        }
+
+        .right h3 {
+            margin-left: 120px;
+            padding-top: 40px;
+            font-size: 20px;
+            font-weight: 450;
+            color: #5a5959;
+        }
+
+        .info {
+            width: 690px;
+            height: 128px;
+            background-color: #fff;
+            margin-left: 120px;
+            margin-top: 38px;
+            border-top: 1px solid rgb(236, 229, 229);
+            border-bottom: 1px solid rgb(236, 229, 229);
+        }
+
+        .name {
+            float: left;
+            width: 330px;
+            height: 62px;
+            background-color: #fff;
+        }
+
+        .name h4 {
+            padding-top: 10px;
+            padding-left: 2px;
+            font-size: 14px;
+            font-weight: 520;
+            color: #5d5c5c;
+        }
+
+        .name input {
+            margin-top: 6px;
+            width: 321px;
+            height: 30px;
+            border: 1px solid #c7c2c2;
+            padding-left: 7px;
+            color: #948d8d;
+            outline: none;
+        }
+
+        .password {
+            margin-left: 30px;
+        }
+
+        .remember {
+            float: left;
+            height: 16px;
+            margin-left: 5px;
+            margin-top: 25px;
+            line-height: 16px;
+            font-size: 14px;
+            color: #5f5e5e;
+        }
+
+        .remember input {
+            float: left;
+            width: 18px;
+            height: 18px;
+
+        }
+
+        .remember p {
+            float: left;
+            margin-top: 3px;
+        }
+
+        .login {
+            margin-top: 30px;
+            margin-left: 120px;
+            width: 690px;
+            background-color: pink;
+        }
+
+        .login button {
+            float: right;
+            width: 95px;
+            height: 40px;
+            background-color: rgb(67, 144, 185);
+            border: 0;
+            color: #fff;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <h1>企业使命</h1>
+        <p>体验竞争，获胜和击败对手的感觉</p>
+    </div>
+    <div class="left">
+        <img src="pic.jpg" alt="pic">
+    </div>
+    <div class="right">
+        <h2>Login</h2>
+        <h3>Welcome Back !</h3>
+        <div class="info">
+            <div class="name">
+                <h4>用户名:</h4>
+                <input type="text" placeholder="Enter Name">
+            </div>
+            <div class="name password">
+                <h4>密码:</h4>
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="remember">
+                <input type="checkbox" />
+                <p>&nbsp; 记住登录</p>
+            </div>
+        </div>
+        <div class="login">
+            <button>登录</button>
+        </div>
+    </div>
+</body>
+
+</html>
